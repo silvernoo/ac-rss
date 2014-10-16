@@ -7,8 +7,8 @@ import time
 import pprint 
 from lxml import etree
 
-import etree_util
-import simple_http
+from com.acfun import etree_util
+from com.acfun import simple_http
 
 def getpage(url, nsecs=5):
     try:

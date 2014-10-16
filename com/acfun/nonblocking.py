@@ -12,14 +12,14 @@ import mmap
 import traceback
 import ujson
 import _proc
-import simple_http
-import simple_gzip
+from http import simple_http
+from http import simple_gzip
 
 from time import time 
 from time import sleep
-from simple_http import auto_content_type
-from simple_http import parse_simple_post
-from simple_http import parse_header
+from http.simple_http import auto_content_type
+from http.simple_http import parse_simple_post
+from http.simple_http import parse_header
 from socket import inet_ntoa
 from struct import unpack
 from cStringIO import StringIO

@@ -3,7 +3,7 @@ import socket
 from pprint import pprint
 import pdb
 import sys
-import simple_http
+from com.acfun import simple_http
 import zlib
 
 def _handle_chunked(data, normal_stream):
