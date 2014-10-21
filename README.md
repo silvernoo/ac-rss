@@ -8,3 +8,7 @@ acfun文章区的RSS
 ```
 http://bakaboku.info/feed.xml
 ```
+
+Thanks
+=======
+[simple_http](https://github.com/maliubiao/simple_http)
