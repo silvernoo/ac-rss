@@ -11,8 +11,8 @@ pageNo		|页数
 
 ### 更新规则
 
-每2小时更新一次本地文件
+每小时更新一次本地文件
 
-RRS条目只存在10个
+RRS条目只存在20个
 
-> \* */2 * * * /root/acfun_check.py
+> \* */1 * * * python /root/ac-rss/com/acfun/acfun_feed.py
