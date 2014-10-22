@@ -15,4 +15,4 @@ pageNo		|页数
 
 RRS条目只存在20个
 
-> \* */1 * * * python /root/ac-rss/com/acfun/acfun_feed.py
+> 1 * * * * python /root/ac-rss/com/acfun/acfun_feed.py
