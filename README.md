@@ -1,12 +1,12 @@
 ac-rss
 ======
 
-acfun文章区的RSS
+acfun文章区RSS
 
-直接使用以下地址订阅
+直接订阅此地址
 
 ```
-http://bakaboku.info/feed.xml
+http://bakaboku.me/rss.xml
 ```
 
 Thanks
