@@ -1,4 +1,4 @@
-ac-rss
+AC-RSS
 ======
 
 acfun文章区RSS
@@ -7,6 +7,12 @@ acfun文章区RSS
 
 http://107.182.182.37/rss.xml
 
-Thanks
-=======
-[simple_http](https://github.com/maliubiao/simple_http)
+###综合
+
+###工作·情感
+
+###动漫文化
+
+###漫画·轻小说
+
+###游戏

@@ -1,0 +1,2 @@
+requests==2.11.0
+PyRSS2Gen==1.1
