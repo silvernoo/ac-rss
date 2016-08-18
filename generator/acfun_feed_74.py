@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     rss = PyRSS2Gen.RSS2(
         title='Acfun 文章区',
-        link='http://www.acfun.tv/v/list110/index.htm',
+        link='http://www.acfun.tv/v/list74/index.htm',
         description='Acfun 文章区',
         lastBuildDate=datetime.datetime.now(),
         items=items)
