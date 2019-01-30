@@ -6,7 +6,7 @@ import datetime
 import PyRSS2Gen
 import threading
 import requests
-from generator.all_channel import get_all_channel
+from all_channel import get_all_channel
 
 
 def rss_parse(thread_id, r_ids):
