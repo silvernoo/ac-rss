@@ -1,4 +1,1 @@
-
-```
-docker run -d -t -e GIT_USER=xxx -e GIT_MAIL=xxx@gamil.com -e GITHUB_MAIL=xxx@gmail.com -e GITHUB_PW=123456 matosama/ac-rss:latest
-```
+docker run -d -t -e GIT_NAME=<git-name> -e GIT_MAIL=<git-maid> -e GITHUB_USER=<github-user> -e GITHUB_PW=<github-password> matosama/ac-rss:latest

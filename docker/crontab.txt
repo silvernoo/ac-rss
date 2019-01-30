@@ -1,0 +1,1 @@
+*/10 * * * * cd /usr/src/app/ac-rss/ && python generator/rss_feed.py && git add . && git commit -m "renew" && git push
