@@ -2,5 +2,6 @@
 
 python ./generator/rss_feed.py
 
-git add .xml
-git push -a ""
+git add .
+git commit -am "renew"
+git push
