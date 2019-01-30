@@ -43,7 +43,7 @@ def rss_parse(thread_id, r_ids):
     list = json["vdata"]["list"]
     for item in list:
         items.append(PyRSS2Gen.RSSItem(
-            title=item["channel"]["name"],
+            title=item["title"],
             link="http://www.acfun.tv/a/ac" + item["href"],
             guid=PyRSS2Gen.Guid("http://www.acfun.cn/a/ac" + item["href"]),
             pubDate=datetime.datetime.fromtimestamp(item["time"] / 1000).strftime("%Y-%m-%d %H:%M:%S")))
