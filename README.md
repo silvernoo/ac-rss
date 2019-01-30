@@ -1,29 +1,22 @@
 AC-RSS
 ======
 
-直接订阅此地址
+订阅以下地址
 ======
 
-
-####综合
-http://107.182.182.37/feed_110.xml
+https://raw.githubusercontent.com/silvernoo/ac-rss/master/rrs/feed_110.xml
 
 
-
-####工作·情感
-http://107.182.182.37/feed_73.xml
+https://raw.githubusercontent.com/silvernoo/ac-rss/master/rrs/feed_164.xml
 
 
-
-####动漫文化
-http://107.182.182.37/feed_74.xml
+https://raw.githubusercontent.com/silvernoo/ac-rss/master/rrs/feed_184.xml
 
 
-
-####漫画·轻小说
-http://107.182.182.37/feed_75.xml
+https://raw.githubusercontent.com/silvernoo/ac-rss/master/rrs/feed_73.xml
 
 
+https://raw.githubusercontent.com/silvernoo/ac-rss/master/rrs/feed_74.xml
 
-####游戏
-http://107.182.182.37/feed_164.xml
+
+https://raw.githubusercontent.com/silvernoo/ac-rss/master/rrs/feed_75.xml
