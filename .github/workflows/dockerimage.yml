@@ -3,12 +3,33 @@ name: Docker Image CI
 on: [push]
 
 jobs:
-
-  build:
-
+  ac-rss:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        arch: [arm64v8,arm32v7,amd64]
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
+    - name: Get qemu-user-static
+      run: sudo apt-get update && sudo apt-get install -y qemu-user-static
+    - name: Configure Docker
+      run: |
+        echo '{"experimental":true}' | sudo tee /etc/docker/daemon.json
+        sudo service docker restart
+        docker run --rm --privileged multiarch/qemu-user-static:register
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: |
+        if [[ "$ARCH" == "amd64" ]]; then export QEMU_BIN="qemu-x86_64-static"; fi
+        if [[ "$ARCH" == "arm32v7" ]]; then export QEMU_BIN="qemu-arm-static"; fi
+        if [[ "$ARCH" == "arm64v8" ]]; then export QEMU_BIN="qemu-aarch64-static"; fi
+        cp /usr/bin/$QEMU_BIN .
+        docker build --build-arg="ARCH=$ARCH" --build-arg="QEMU_BIN=$QEMU_BIN" --squash --file /docker/Dockerfile  -t matosama/ac-rss:"$ARCH" .
+      env:
+        ARCH: ${{ matrix.arch }}
+        DOCKER_CLI_EXPERIMENTAL: enabled
+    - name: Log in to registry
+      run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login docker.io -u ${{ secrets.DOCKER_USER }} --password-stdin
+    - name: Push image
+      run: docker push matosama/ac-rss:"$ARCH"
+      env:
+        ARCH: ${{ matrix.arch }}
