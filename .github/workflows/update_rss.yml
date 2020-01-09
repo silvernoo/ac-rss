@@ -1,6 +1,8 @@
 name: Update RSS
 
-on: [push]
+on:
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   ac-rss:
@@ -28,4 +30,4 @@ jobs:
           python generator/rss_feed.py
           git add .
           git commit -m "renew"
-          git push        
+          git push
