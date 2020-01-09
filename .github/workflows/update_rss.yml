@@ -6,6 +6,10 @@ jobs:
   ac-rss:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
       - name: Checkout
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -24,4 +28,4 @@ jobs:
           python generator/rss_feed.py
           git add .
           git commit -m "renew"
-          git push
+          git push        
