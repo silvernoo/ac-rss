@@ -7,19 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        set -e
-        REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
-        git init
-        git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+          git init
+          git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
 
-        pip install -r requirements.txt
-        python generator/rss_feed.py
-        git add .
-        git commit -m "renew"
-        git push
+          pip install -r requirements.txt
+          python generator/rss_feed.py
+          git add .
+          git commit -m "renew"
+          git push
