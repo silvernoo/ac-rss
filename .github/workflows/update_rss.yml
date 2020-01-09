@@ -18,6 +18,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
+          git checkout -t origin/master
+
           pip install -r requirements.txt
           python generator/rss_feed.py
           git add .
