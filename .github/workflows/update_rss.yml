@@ -17,10 +17,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
-          REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
           git init
-          git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+          git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/silvernoo/ac-rss.git
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git fetch origin master
